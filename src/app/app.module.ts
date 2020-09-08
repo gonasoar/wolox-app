@@ -15,6 +15,7 @@ import { LandingPageComponent } from './components/views/landing-page/landing-pa
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSnackBarModule,
     MatCheckboxModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
