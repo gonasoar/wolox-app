@@ -16,10 +16,10 @@ export class ListadoComponent implements OnInit {
   ngOnInit(): void {
     this.getListadoTech();
   }
-  
+
   getListadoTech() {
-    this.techService.getListadoTech().subscribe((data: Tech) => {
-      console.log(data);
+    this.techService.getListadoTech().subscribe((tech: Tech[]) => {
+      this.data = tech;
     }, error => {
 
     });

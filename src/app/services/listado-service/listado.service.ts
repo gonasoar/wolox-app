@@ -11,8 +11,8 @@ export class ListadoService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getListadoTech(): Observable<Tech> {
-    return this.httpClient.get<Tech>(`${environment.apiUrl}/techs`);
+  getListadoTech(): Observable<Tech[]> {
+    return this.httpClient.get<Tech[]>(`${environment.apiUrl}/techs`);
   }
 
 }

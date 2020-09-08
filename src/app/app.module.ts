@@ -13,6 +13,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ListadoComponent } from './components/views/listado/listado.component';
 import { LandingPageComponent } from './components/views/landing-page/landing-page.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTableModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
