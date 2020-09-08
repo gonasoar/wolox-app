@@ -1,0 +1,10 @@
+<form (ngSubmit)="loginUser()" [formGroup]="loginForm">
+    <input formControlName='email' type="email" class="form-control" placeholder="Ingrese Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+    <div *ngIf="submitted && f.email.errors" class="invalid">
+        <div *ngIf="f.email.errors.required ">Email campo requerido</div>
+        <div *ngIf="f.email.errors.email ">Ingrese un email válido</div>
+    </div>
+    <input formControlName='password' type="password" maxlength="8" class="form-control" placeholder="Ingrese Password" />
+    <mat-checkbox>Mantenerse conectado</mat-checkbox>
+    <button class="btn btn-default ">Login</button>
+</form>

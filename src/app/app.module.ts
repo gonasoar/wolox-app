@@ -1,16 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { routing } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/views/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ListadoComponent } from './components/views/listado/listado.component';
+import { LandingPageComponent } from './components/views/landing-page/landing-page.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    ListadoComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    routing,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
