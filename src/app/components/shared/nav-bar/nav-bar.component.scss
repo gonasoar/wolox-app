@@ -1,0 +1,73 @@
+.logo {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.logo>div:first-child {
+    width: 20%;
+}
+
+.img-woloxers>div:nth-child(2) {
+    width: 80%;
+}
+
+header {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    background-image: url("../../../../assets/Assets/assets/Backgrounds/Bg_Header.png");
+}
+
+.logo img {
+    width: 200px;
+}
+
+.nav {
+    font-size: 18px;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.nav>div {
+    width: 16%;
+}
+
+.button-nav {
+    padding: 0.6em 2em;
+    border-radius: 44px;
+    color: black;
+    background-color: white;
+    font-size: 1.1em;
+    border: 0;
+    cursor: pointer;
+    width: 250px;
+    height: 45px;
+}
+
+.button {
+    padding: 0.6em 2em;
+    border-radius: 44px;
+    color: #00A7E8;
+    background-color: white;
+    font-size: 1.1em;
+    border: 1px solid #00A7E8;
+    cursor: pointer;
+    margin: 1em;
+    width: 250px;
+    height: 45px;
+}
+
+.img-woloxers>div:first-child {
+    background-image: url("../../../../assets/Assets/assets/img_woloxer.png");
+}
+
+.img-woloxers>div:nth-child(2) {
+    font-size: 40px;
+    background-color: #F2F5FA
+}

@@ -16,13 +16,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ListadoComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
