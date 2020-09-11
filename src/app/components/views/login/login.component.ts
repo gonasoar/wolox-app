@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login-service/login.service';
 import { ResponseLogin } from 'src/app/models/responses/response-login';
+import { AuthService } from '../../../services/auth-service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -19,12 +20,14 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private loginService: LoginService,
               private snackBar: MatSnackBar,
-              private router: Router) { }
+              private router: Router,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
+      mantenerConectado: [false]
     });
   }
 
@@ -38,9 +41,9 @@ export class LoginComponent implements OnInit {
 
       this.loginService.loginUser(this.usuario).subscribe((resp: ResponseLogin) => {
         if (resp.token !== undefined) {
-          // this.snackBar.open('Registrado', 'OK', {
-          //   duration: 2000,
-          // });
+          this.usuario.Token = resp.token;
+          this.setLocalStorage(this.usuario);
+          this.authService.autenticar(resp.token);
           this.router.navigateByUrl('listado-tech');
         } else {
           this.snackBar.open('Usuario o contraseña incorrectos', 'OK', {
@@ -57,4 +60,11 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  setLocalStorage(usuario) {
+    localStorage.setItem('usuarioLogin', JSON.stringify(usuario));
+  }
+
+  getLocalStorage() {
+    localStorage.getItem('usuarioLogin');
+  }
 }

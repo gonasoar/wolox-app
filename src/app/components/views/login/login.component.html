@@ -1,10 +1,25 @@
-<form (ngSubmit)="loginUser()" [formGroup]="loginForm">
-    <input formControlName='email' type="email" class="form-control" placeholder="Ingrese Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-    <div *ngIf="submitted && f.email.errors" class="invalid">
-        <div *ngIf="f.email.errors.required ">Email campo requerido</div>
-        <div *ngIf="f.email.errors.email ">Ingrese un email válido</div>
+<body>
+    <div class="login-box">
+        <img src="../../../../assets/Assets/assets/logo_full_color.svg" class="avatar" alt="Avatar Image">
+        <form (ngSubmit)="loginUser()" [formGroup]="loginForm">
+            <label for="email">Email</label>
+            <input formControlName="email" type="email" placeholder="Ingrese Email">
+            <div *ngIf="submitted && f.email.errors" class="invalid">
+                <div *ngIf="f.email.errors.required ">Email campo requerido</div>
+                <div *ngIf="f.email.errors.email ">Ingrese un email válido</div>
+            </div>
+            <label for="password" style="margin-top:5%;">Password</label>
+            <input formControlName="password" type="password" placeholder="Ingrese Password">
+            <div *ngIf="submitted && f.password.errors" class="invalid">
+                <div *ngIf="f.password.errors.required ">Password campo requerido</div>
+                <div *ngIf="f.password.errors.email ">Ingrese un password válido</div>
+            </div>
+            <div style="margin-top:5%;" class="checkbox">
+                <mat-checkbox formControlName="mantenerConectado">Mantener conectado</mat-checkbox>
+            </div>
+            <div class="login">
+                <input type="submit" value="Login">
+            </div>
+        </form>
     </div>
-    <input formControlName='password' type="password" maxlength="8" class="form-control" placeholder="Ingrese Password" />
-    <mat-checkbox>Mantenerse conectado</mat-checkbox>
-    <button class="btn btn-default ">Login</button>
-</form>
+</body>

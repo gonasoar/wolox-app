@@ -8,16 +8,16 @@
                 <a href="/landing-page#inicio"><button mat-button class="button-nav"><span>Inicio</span></button></a>
             </div>
             <div>
-                <a><button mat-button class="button-nav"><span>Tecnologías</span></button></a>
+                <a href="/landing-page#tecnologias"><button mat-button class="button-nav"><span>Tecnologías</span></button></a>
             </div>
             <div>
-                <a><button mat-button class="button-nav"><span>Beneficios</span></button></a>
+                <a href="/landing-page#beneficios"><button mat-button class="button-nav"><span>Beneficios</span></button></a>
             </div>
             <div>
-                <a><button mat-button class="button-nav"><span>Requerimientos</span></button></a>
+                <a href="/landing-page#requerimientos"><button mat-button class="button-nav"><span>Requerimientos</span></button></a>
             </div>
-            <div class="buttonLogin">
-                <button mat-button class="button"><span>Login</span></button>
+            <div class="buttonLogin" *ngIf="usuario.Token">
+                <button mat-button (click)="redirectToLogin()" class="button"><span>Login</span></button>
             </div>
         </div>
     </div>

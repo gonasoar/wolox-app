@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListadoService } from '../../../services/listado-service/listado.service';
 import { Tech } from 'src/app/models/entity/tech-entity/tech';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-listado',
@@ -8,8 +9,8 @@ import { Tech } from 'src/app/models/entity/tech-entity/tech';
   styleUrls: ['./listado.component.scss']
 })
 export class ListadoComponent implements OnInit {
-
-  data: Tech[];
+  dataSource = new MatTableDataSource(tecnologias);
+  cantidadTecnologias = 0;
   constructor(private techService: ListadoService) { }
   tableColumns: string[] = ['tech', 'year', 'author', 'license', 'language', 'type', 'logo'];
 
@@ -19,9 +20,18 @@ export class ListadoComponent implements OnInit {
 
   getListadoTech() {
     this.techService.getListadoTech().subscribe((tech: Tech[]) => {
-      this.data = tech;
+      this.dataSource.data = tech;
+      this.cantidadTecnologias = tech.length;
     }, error => {
-
+      
     });
   }
+
+  applyFilter(event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    // this.cantidadTecnologias = this.dataSource.filter.length;
+  }
 }
+
+const tecnologias: Tech[] = [];
