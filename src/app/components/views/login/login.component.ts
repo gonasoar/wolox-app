@@ -15,6 +15,7 @@ import { AuthService } from '../../../services/auth-service/auth.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   usuario: Usuario = new Usuario();
+  usuarioLogin: Usuario;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder,
@@ -24,27 +25,39 @@ export class LoginComponent implements OnInit {
               private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-      mantenerConectado: [false]
-    });
+
+    this.usuarioLogin = JSON.parse(localStorage.getItem('usuarioLogin'));
+
+    if (this.usuarioLogin != null) {
+      this.redirectToListado();
+    } 
+      this.loginForm = this.formBuilder.group({
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', Validators.required],
+        mantenerConectado: [false]
+      });
+    
   }
 
   get f() { return this.loginForm.controls; }
+
+ 
 
   loginUser() {
     this.submitted = true;
     if (this.loginForm.valid) {
       this.usuario.Email = this.loginForm.value.email;
       this.usuario.Password = this.loginForm.value.password;
+      this.usuario.MantenerConectado = this.loginForm.value.mantenerConectado;
 
       this.loginService.loginUser(this.usuario).subscribe((resp: ResponseLogin) => {
         if (resp.token !== undefined) {
-          this.usuario.Token = resp.token;
-          this.setLocalStorage(this.usuario);
+           // Autentica que el usuario este logueado para poder redirigir a las pantallas.
           this.authService.autenticar(resp.token);
-          this.router.navigateByUrl('listado-tech');
+          if (this.usuario.MantenerConectado) {
+            this.setLocalStorage(this.usuario);
+          }
+          this.router.navigateByUrl('landing-page');
         } else {
           this.snackBar.open('Usuario o contraseña incorrectos', 'OK', {
             duration: 2000,
@@ -66,5 +79,10 @@ export class LoginComponent implements OnInit {
 
   getLocalStorage() {
     localStorage.getItem('usuarioLogin');
+  }
+
+  redirectToListado() {
+    this.authService.isAuthenticate = true;
+    this.router.navigateByUrl('listado-tech');
   }
 }

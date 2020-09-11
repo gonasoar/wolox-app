@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ListadoService } from '../../../services/listado-service/listado.service';
 import { Tech } from 'src/app/models/entity/tech-entity/tech';
 import { MatTableDataSource } from '@angular/material/table';
+import { ListadoService } from '../../../services/listado-service/listado.service';
 
 @Component({
   selector: 'app-listado',
@@ -30,7 +30,6 @@ export class ListadoComponent implements OnInit {
   applyFilter(event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-    // this.cantidadTecnologias = this.dataSource.filter.length;
   }
 }
 

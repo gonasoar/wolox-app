@@ -7,11 +7,12 @@
 }
 
 .logo>div:first-child {
-    width: 20%;
+    width: 10%;
 }
 
-.img-woloxers>div:nth-child(2) {
+.logo>div:nth-child(2) {
     width: 80%;
+    margin-left: 10%;
 }
 
 header {
@@ -35,10 +36,6 @@ header {
     background-image: url("../../../../assets/Assets/assets/Backgrounds/Bg_Header@3x.png");
 }
 
-.nav>div {
-    width: 16%;
-}
-
 .button-nav {
     border-radius: 44px;
     color: black;
@@ -46,8 +43,6 @@ header {
     font-size: 1.1em;
     border: 0;
     cursor: pointer;
-    width: 250px;
-    height: 45px;
 }
 
 .button-nav:hover {
@@ -59,22 +54,30 @@ header {
     border-radius: 44px;
     color: #00A7E8;
     background-color: white;
-    font-size: 1.1em;
+    font-size: 0.9em;
     border: 1px solid #00A7E8;
     cursor: pointer;
     width: 200px;
-    height: 45px;
+    margin-top: -50%;
 }
 
 .buttonLogin {
+    margin-top: 0.5%;
+    margin-left: 3%;
+}
+
+.Requerimientos {
     margin-left: 5%;
 }
 
-.img-woloxers>div:first-child {
-    background-image: url("../../../../assets/Assets/assets/img_woloxer.png");
+.Tecnologías {
+    margin-left: 5%;
 }
 
-.img-woloxers>div:nth-child(2) {
-    font-size: 40px;
-    background-color: #F2F5FA
+.Beneficios {
+    margin-left: 5%;
+}
+
+.Inicio {
+    margin-left: 5%;
 }

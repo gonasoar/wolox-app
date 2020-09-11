@@ -4,19 +4,10 @@
             <img class="img" src="../../../../assets/Assets/assets/logo_full_color.svg">
         </div>
         <div class="nav">
-            <div>
-                <a href="/landing-page#inicio"><button mat-button class="button-nav"><span>Inicio</span></button></a>
+            <div *ngFor="let item of arrayNav" class="{{item.Titulo}}">
+                <a href="{{item.Href}}"><button  class="button-nav" mat-button><span>{{item.Titulo}}</span></button></a>
             </div>
-            <div>
-                <a href="/landing-page#tecnologias"><button mat-button class="button-nav"><span>Tecnologías</span></button></a>
-            </div>
-            <div>
-                <a href="/landing-page#beneficios"><button mat-button class="button-nav"><span>Beneficios</span></button></a>
-            </div>
-            <div>
-                <a href="/landing-page#requerimientos"><button mat-button class="button-nav"><span>Requerimientos</span></button></a>
-            </div>
-            <div class="buttonLogin" *ngIf="usuario.Token">
+            <div class="buttonLogin" *ngIf="usuarioLogin == null">
                 <button mat-button (click)="redirectToLogin()" class="button"><span>Login</span></button>
             </div>
         </div>
