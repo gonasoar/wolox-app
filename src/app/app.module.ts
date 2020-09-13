@@ -17,6 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 import { LandingPageComponent } from './components/views/landing/landing-page.component';
 import { ListadoComponent } from './components/views/listado/listado.component';
+import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { ListadoComponent } from './components/views/listado/listado.component';
     MatCheckboxModule,
     MatTableModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSortModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

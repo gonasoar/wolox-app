@@ -1,83 +1,83 @@
-.logo {
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
-    margin-top: 3%;
-    margin-left: 5%;
-}
-
-.logo>div:first-child {
-    width: 10%;
-}
-
-.logo>div:nth-child(2) {
-    width: 80%;
-    margin-left: 10%;
-}
-
-header {
-    background-color: white;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    background-image: url("../../../../assets/Assets/assets/Backgrounds/Bg_Header.png");
-}
-
-.logo img {
-    width: 200px;
-}
-
-.nav {
-    font-size: 18px;
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
-    background-image: url("../../../../assets/Assets/assets/Backgrounds/Bg_Header@3x.png");
-}
-
-.button-nav {
-    border-radius: 44px;
-    color: black;
-    background-color: white;
-    font-size: 1.1em;
-    border: 0;
-    cursor: pointer;
-}
-
-.button-nav:hover {
-    color: white;
-    background-color: #00A7E8
-}
-
-.button {
-    border-radius: 44px;
-    color: #00A7E8;
-    background-color: white;
-    font-size: 0.9em;
-    border: 1px solid #00A7E8;
-    cursor: pointer;
-    width: 200px;
-    margin-top: -50%;
-}
-
-.buttonLogin {
-    margin-top: 0.5%;
-    margin-left: 3%;
-}
-
-.Requerimientos {
-    margin-left: 5%;
-}
-
-.Tecnologías {
-    margin-left: 5%;
-}
-
-.Beneficios {
-    margin-left: 5%;
-}
-
-.Inicio {
-    margin-left: 5%;
-}
+    .logo {
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+    
+    .logo>div:first-child {
+        width: 10%;
+    }
+    
+    .logo>div:nth-child(2) {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    header {
+        background-color: white;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+        background-image: url("../../../../assets/Assets/assets/Backgrounds/Bg_Header.png");
+    }
+    
+    .logo img {
+        width: 200px;
+    }
+    
+    .nav {
+        font-size: 18px;
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        background-image: url("../../../../assets/Assets/assets/Backgrounds/Bg_Header@3x.png");
+    }
+    
+    .button-nav {
+        border-radius: 44px;
+        color: black;
+        background-color: white;
+        font-size: 1.1em;
+        border: 0;
+        cursor: pointer;
+    }
+    
+    .button-nav:hover {
+        color: white;
+        background-color: #00A7E8
+    }
+    
+    .button {
+        border-radius: 44px;
+        color: #00A7E8;
+        background-color: white;
+        font-size: 0.9em;
+        border: 1px solid #00A7E8;
+        cursor: pointer;
+        width: 200px;
+        margin-top: -50%;
+    }
+    
+    .buttonLogin {
+        margin-top: 0.5%;
+        margin-left: 3%;
+    }
+    
+    .Requerimientos {
+        margin-left: 5%;
+    }
+    
+    .Tecnologías {
+        margin-left: 5%;
+    }
+    
+    .Beneficios {
+        margin-left: 5%;
+    }
+    
+    .Inicio {
+        margin-left: 5%;
+    }

@@ -1,4 +1,7 @@
 <app-nav-bar [usuario]="usuario"></app-nav-bar>
+<!-- <mat-select>
+    <mat-option *ngFor="let opt of language" (click)="changeLanguage(opt);">{{opt.Nombre}}</mat-option>
+</mat-select> -->
 
 <body>
     <div id="inicio" class="img-hero">
@@ -42,23 +45,23 @@
 
     <div class="item-beneficios">
         <div><img src="../../../../assets/Assets/assets/reloj.png">
-            <p>Flexibilidad <br align="center"> Horaria
+            <p>Flexibilidad <br><span>Horaria</span>
             </p>
         </div>
         <div><img src="../../../../assets/Assets/assets/home-office.png">
             <p>Home Office</p>
         </div>
         <div><img src="../../../../assets/Assets/assets/workshoop.png">
-            <p>Capacitaciones <br> y workshops</p>
+            <p>Capacitaciones <br><span>y workshops</span> </p>
         </div>
         <div><img src="../../../../assets/Assets/assets/drink-snack.png">
             <p>Snacks, frutas <br> y bebidas gratis</p>
         </div>
         <div><img src="../../../../assets/Assets/assets/notebook.png">
-            <p>Semana <br> Remota</p>
+            <p style="margin-left:8%">Semana <br> Remota</p>
         </div>
         <div><img src="../../../../assets/Assets/assets/cerebro.png">
-            <p>Trabajar <br> en ultimas <br> tecnologías</p>
+            <p style="margin-right: 50%" align="center">Trabajar <br> en ultimas <br> tecnologías</p>
         </div>
     </div>
 
@@ -68,11 +71,11 @@
         </div>
         <div>
             <img src="../../../../assets/Assets/assets/bullet1.png">
-            <span>Estudiantes avanzados o recibidos de carreras del rubro <br> informático, sistemas o electrónicos.<br><br></span>
-            <img class="alineado" src="../../../../assets/Assets/assets/bullet2.png">
-            <span>Inglés intermedio / avanzado.</span><br><br>
-            <img class="alineado" src="../../../../assets/Assets/assets/bullet3.png">
-            <span>Conocimiento de metodologías ágiles (deseable).<br></span>
+            <p>Estudiantes avanzados o recibidos de carreras del rubro <br> <span>informático, sistemas o electrónicos.</span><br></p>
+            <img src="../../../../assets/Assets/assets/bullet2.png">
+            <p>Inglés intermedio / avanzado.</p><br>
+            <img src="../../../../assets/Assets/assets/bullet3.png">
+            <p>Conocimiento de metodologías ágiles (deseable).<br></p>
         </div>
     </div>
     <div align="center" class="ejercicioCompleto">

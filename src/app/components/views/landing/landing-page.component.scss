@@ -139,7 +139,8 @@
         
         .img-woloxers>div:nth-child(2) {
             font-size: 40px;
-            background-color: #F2F5FA
+            background-color: #F2F5FA;
+            font-weight: bold;
         }
         
         .img-twitter {
@@ -162,11 +163,13 @@
         .convertir {
             color: #00A9E5;
             font-weight: bold;
+            font-family: "montserratBlackBold";
         }
         
         .ideas {
             color: #97CF00;
             font-weight: bold;
+            font-family: "montserratBlackBold";
         }
         
         .beneficios {
@@ -193,6 +196,10 @@
             padding: 10px;
         }
         
+        .item-beneficios span {
+            margin-left: 5%;
+        }
+        
         .requerimientos {
             display: -ms-flex;
             display: -webkit-flex;
@@ -208,16 +215,15 @@
         .requerimientos>div:first-child p {
             font-size: 30px;
             font-weight: bold;
+            font-family: "montserratBlackBold";
             margin-left: 13%;
+            margin-top: 8%;
         }
         
-        .alineado {
-            vertical-align: text-top;
-            font-weight: bold;
-            text-justify: auto;
-        }
-        
-        .requerimientos span {
+        .requerimientos p {
+            margin-left: 5%;
+            margin-top: -4%;
+            font-family: "montserratBlack";
             font-weight: bold;
         }
         
@@ -238,6 +244,10 @@
         .verMasInfo {
             font-size: 30px;
             margin-top: -2%;
+        }
+        
+        .conocerMas {
+            background-image: url("../../../../assets/Assets/assets/Backgrounds/Bg_Footer.png");
         }
         
         .conocerMas button {

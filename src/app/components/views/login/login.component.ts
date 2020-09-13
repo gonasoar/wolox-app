@@ -50,27 +50,30 @@ export class LoginComponent implements OnInit {
       this.usuario.Password = this.loginForm.value.password;
       this.usuario.MantenerConectado = this.loginForm.value.mantenerConectado;
 
-      this.loginService.loginUser(this.usuario).subscribe((resp: ResponseLogin) => {
-        if (resp.token !== undefined) {
-           // Autentica que el usuario este logueado para poder redirigir a las pantallas.
-          this.authService.autenticar(resp.token);
-          if (this.usuario.MantenerConectado) {
-            this.setLocalStorage(this.usuario);
+      if (this.usuario.Email.trim().toLowerCase() === 'user@wolox.com.ar' && this.usuario.Password.toString().trim().toLowerCase() === '12345678') {
+        this.loginService.loginUser(this.usuario).subscribe((resp: ResponseLogin) => {
+          if (resp.token !== undefined) {
+             // Autentica que el usuario este logueado para poder redirigir a las pantallas.
+            this.authService.autenticar(resp.token);
+            if (this.usuario.MantenerConectado) {
+              this.setLocalStorage(this.usuario);
+            }
+            this.router.navigateByUrl('landing-page');
           }
-          this.router.navigateByUrl('landing-page');
-        } else {
-          this.snackBar.open('Usuario o contraseña incorrectos', 'OK', {
-            duration: 2000,
-          });
-        }
-      }, error =>  {
-          console.log('Error de servicio');
-      });
-    }
-    // stop here if form is invalid
-    if (this.loginForm.invalid) {
-        return;
-    }
+        }, error =>  {
+            this.snackBar.open('Error de servicio', 'OK', {
+              duration: 2000,
+            });
+        });
+      } else {
+        this.snackBar.open('Usuario o contraseña incorrectos', 'OK', {
+          duration: 2000,
+        });
+      }
+      } else {
+          return;
+      }
+   
   }
 
   setLocalStorage(usuario) {

@@ -8,18 +8,17 @@ body {
     border-image-repeat: stretch;
     background-color: rgb(255, 255, 255);
     width: 90%;
-    font-family: "montserratBlack";
 }
 
 p {
-    font-family: "firasans";
-    font-weight: 200;
+    font-family: "montserratBlackBold";
     font-size: 45px;
     margin-right: 30%;
     margin-top: 2%;
+    font-weight: bold;
 }
 
-table {
+mat-table {
     width: 100%;
 }
 
@@ -49,4 +48,8 @@ table th {
 
 .cantidad {
     font-weight: bold;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
 }
